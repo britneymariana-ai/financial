@@ -120,7 +120,7 @@ function AmountField({
   );
 }
 
-export function BudgetPlanner() {
+export function BudgetPlanner({ showHero = true }: { showHero?: boolean }) {
   const [monthlyMoney, setMonthlyMoney] = useState("4500");
   const [savingsPercent, setSavingsPercent] = useState(20);
   const [needsSpent, setNeedsSpent] = useState("850");
@@ -159,41 +159,43 @@ export function BudgetPlanner() {
 
   return (
     <>
-      <section className="hero page-width" id="top" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <p className="eyebrow hero-eyebrow"><span className="eyebrow-mark" aria-hidden="true" /> ISSUE 04 · KENYAN TEEN FINANCE</p>
-          <h1 id="hero-title">Make your money <span>make sense.</span></h1>
-          <p className="hero-description">
-            A little plan for your pocket money can make room for the stuff you need, the things you love, and the goals you&apos;re saving for.
-          </p>
-          <a className="button-primary" href="#money-map">
-            Build my money map <ArrowRight size={17} strokeWidth={2.5} aria-hidden="true" />
-          </a>
-          <ul className="hero-proof-points" aria-label="About the planner">
-            <li><Check size={15} strokeWidth={2.8} aria-hidden="true" /> Zero bank jargon</li>
-            <li><Check size={15} strokeWidth={2.8} aria-hidden="true" /> Built for real life</li>
-            <li><Check size={15} strokeWidth={2.8} aria-hidden="true" /> 100% KES-real examples</li>
-          </ul>
-        </div>
-        <figure className="hero-photo">
-          <Image
-            className="hero-photo__image"
-            src="/images/student-budget-planning.png"
-            alt="Three Kenyan high school students planning their pocket money together at a sunny school courtyard table."
-            fill
-            priority
-            sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 42vw, 500px"
-          />
-          <div className="hero-photo__shade" aria-hidden="true" />
-          <figcaption className="hero-photo__content">
-            <div className="photo-pulse">
-              <span>THIS WEEK&apos;S MONEY MOVE</span>
-              <strong>Make a plan for the stuff that matters.</strong>
-            </div>
-            <span className="photo-age">AGES 14–17</span>
-          </figcaption>
-        </figure>
-      </section>
+      {showHero && (
+        <section className="hero page-width" id="top" aria-labelledby="hero-title">
+          <div className="hero-copy">
+            <p className="eyebrow hero-eyebrow"><span className="eyebrow-mark" aria-hidden="true" /> ISSUE 04 · KENYAN TEEN FINANCE</p>
+            <h1 id="hero-title">Make your money <span>make sense.</span></h1>
+            <p className="hero-description">
+              A little plan for your pocket money can make room for the stuff you need, the things you love, and the goals you&apos;re saving for.
+            </p>
+            <a className="button-primary" href="#money-map">
+              Build my money map <ArrowRight size={17} strokeWidth={2.5} aria-hidden="true" />
+            </a>
+            <ul className="hero-proof-points" aria-label="About the planner">
+              <li><Check size={15} strokeWidth={2.8} aria-hidden="true" /> Zero bank jargon</li>
+              <li><Check size={15} strokeWidth={2.8} aria-hidden="true" /> Built for real life</li>
+              <li><Check size={15} strokeWidth={2.8} aria-hidden="true" /> 100% KES-real examples</li>
+            </ul>
+          </div>
+          <figure className="hero-photo">
+            <Image
+              className="hero-photo__image"
+              src="/images/student-budget-planning.png"
+              alt="Three Kenyan high school students planning their pocket money together at a sunny school courtyard table."
+              fill
+              priority
+              sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 42vw, 500px"
+            />
+            <div className="hero-photo__shade" aria-hidden="true" />
+            <figcaption className="hero-photo__content">
+              <div className="photo-pulse">
+                <span>THIS WEEK&apos;S MONEY MOVE</span>
+                <strong>Make a plan for the stuff that matters.</strong>
+              </div>
+              <span className="photo-age">AGES 14–17</span>
+            </figcaption>
+          </figure>
+        </section>
+      )}
 
       <section className="planner-section page-width" id="money-map" aria-labelledby="planner-title">
         <div className="section-heading">

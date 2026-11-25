@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import "./landing.css";
 
 export const metadata: Metadata = {
-  title: "PesaZine — Your money, your next move",
+  title: "PesaZine — Kenyan Teen Financial Literacy Hub",
   description:
-    "A friendly pocket-money planner for Kenyan teens. Make a simple KES plan, track what you spend, and save toward something you care about.",
+    "Student-built financial literacy for Kenyan teens ages 14–17: M-Pesa realities, chama savings, pocket-money plans, and a quick money IQ quiz.",
 };
 
 export const viewport: Viewport = {
