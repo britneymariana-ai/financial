@@ -1,18 +1,17 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-import "./landing.css";
 
 export const metadata: Metadata = {
-  title: "PesaZine — Kenyan Teen Financial Literacy Hub",
+  title: "Rafiki Sanctuary — A quiet corner for Kenyan students",
   description:
-    "Student-built financial literacy for Kenyan teens ages 14–17: M-Pesa realities, chama savings, pocket-money plans, and a quick money IQ quiz.",
+    "A gentle, private wellbeing space for Kenyan secondary students navigating exam pressure, boarding life, and the ups and downs in between.",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#fcf9f6",
+  themeColor: "#fbf7f0",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -22,7 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </head>
